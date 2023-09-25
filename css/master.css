@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+}
+
+h3 {
+  font-family: "Castoro Titling", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0 0.75rem 0;
+  text-align: center;
+}
+
+h4 {
+  border-bottom: 0.0625rem solid rgba(35, 35, 87, 0.9);
+  color: rgba(35, 35, 87, 0.9);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin: 0 0 0.325rem 0;
+  padding-bottom: 0.125rem;
+}
+
+p {
+  margin: 0.25rem 0 0.5rem 0;
+}
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+p.small {
+  font-size: 0.75rem;
+}
+p.large {
+  font-size: 1.5rem;
+}
+p.larger {
+  font-size: 2rem;
+}
+p.condensed {
+  font-family: "Roboto Condensed", sans-serif;
+}
+p.strong {
+  font-weight: 700;
+}
+p.margin-bottom-reduced {
+  margin-bottom: 0.25rem;
+}
+p.tags span {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.3rem;
+}
+
+aside {
+  background-color: rgba(46, 46, 114, 0.9);
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+.progress {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 0.0625rem solid rgba(24, 24, 59, 0.9);
+  border-radius: 0.25rem;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 0;
+}
+.progress ~ .progress {
+  margin-bottom: 0.25rem;
+}
+.progress span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0 0.45rem;
+  position: relative;
+  text-shadow: 1px 1px 1px black;
+  z-index: 2;
+}
+.progress div {
+  background-color: rgba(57, 57, 141, 0.9);
+  background: linear-gradient(0deg, rgba(35, 35, 87, 0.9) 0%, rgba(57, 57, 141, 0.9) 100%);
+  border-right: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.progress.barbarian {
+  color: #ef9982;
+}
+.progress.barbarian div {
+  background-color: #eb7e60;
+  background: linear-gradient(0deg, #e3461c 0%, #eb7e60 100%);
+}
+.progress.bard {
+  color: #c79ec8;
+}
+.progress.bard div {
+  background-color: #b985ba;
+  background: linear-gradient(0deg, #9a589b 0%, #b985ba 100%);
+}
+.progress.cleric {
+  color: #bec7d2;
+}
+.progress.cleric div {
+  background-color: #a8b4c2;
+  background: linear-gradient(0deg, #7b8ea2 0%, #a8b4c2 100%);
+}
+.progress.druid {
+  color: #a7b558;
+}
+.progress.druid div {
+  background-color: #929f47;
+  background: linear-gradient(0deg, #626b2f 0%, #929f47 100%);
+}
+.progress.fighter {
+  color: #af735b;
+}
+.progress.fighter div {
+  background-color: #99614b;
+  background: linear-gradient(0deg, #654131 0%, #99614b 100%);
+}
+.progress.monk {
+  color: #8ac3d8;
+}
+.progress.monk div {
+  background-color: #6eb4cf;
+  background: linear-gradient(0deg, #3c93b4 0%, #6eb4cf 100%);
+}
+.progress.paladin {
+  color: #ccbc89;
+}
+.progress.paladin div {
+  background-color: #c1ad6f;
+  background: linear-gradient(0deg, #9e8944 0%, #c1ad6f 100%);
+}
+.progress.ranger {
+  color: #74a788;
+}
+.progress.ranger div {
+  background-color: #5f9674;
+  background: linear-gradient(0deg, #416850 0%, #5f9674 100%);
+}
+.progress.rogue {
+  color: #7b7e77;
+}
+.progress.rogue div {
+  background-color: #686b65;
+  background: linear-gradient(0deg, #42433f 0%, #686b65 100%);
+}
+.progress.sorcerer {
+  color: #c94b4b;
+}
+.progress.sorcerer div {
+  background-color: #b63737;
+  background: linear-gradient(0deg, #7c2525 0%, #b63737 100%);
+}
+.progress.warlock {
+  color: #a06fbe;
+}
+.progress.warlock div {
+  background-color: #8f55b2;
+  background: linear-gradient(0deg, #663a81 0%, #8f55b2 100%);
+}
+.progress.wizard {
+  color: #4873cf;
+}
+.progress.wizard div {
+  background-color: #325fbf;
+  background: linear-gradient(0deg, #224183 0%, #325fbf 100%);
+}
+
+main {
+  padding: 0.5rem;
+}
+
+.ability_scores {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+.ability_scores div {
+  display: flex;
+  flex-direction: column;
+}
+.ability_scores div span:nth-child(1) {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 0.5rem 0.325rem 0.5rem;
+  text-align: center;
+}
+.ability_scores div span:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  color: white;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.ability_scores div span:nth-child(3) {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-inline: auto;
+  padding: 0.625rem 0.75rem;
+}

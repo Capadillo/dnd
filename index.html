@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Character Sheet</title>
+        <!-- browser -->
+        <link rel="manifest" href="./manifest.json">
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+        <meta name="theme-color" content="white">
+        <!-- apple -->
+        <link rel="apple-touch-icon" href="./images/icon-152.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="Cappy's 5e Character Sheet">
+        <!-- microsoft -->
+        <meta name="msapplication-TileImage" content="./images/icon-144.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <!-- styles -->
+        <link rel="stylesheet" href="./css/remedy.css">
+        <link rel="stylesheet" href="./css/master.css">
+    </head>
+    <body>
+
+        <aside>
+            <h4>Character</h4>
+            <p class="large condensed strong">Runelord Jorgrim</p>
+
+            <h4>Experience</h4>
+            <div class="progress">
+                <span id="level"></span>
+                <span id="level-percentage"></span>
+                <div id="level-progress-bar"></div>
+            </div>
+
+            <h4>Alignment</h4>
+            <p class="tags">
+                <span>Chaotic Neutral</span>
+            </p>
+
+            <h4>Background</h4>
+            <p class="tags">
+                <span>Solider</span>
+            </p>
+
+            <h4>Class</h4>
+            <div class="fighter progress">
+                <span>Fighter</span>
+                <span>8</span>
+                <div style="width: 80%;"></div>
+            </div>
+            <div class="monk progress">
+                <span>Monk</span>
+                <span>1</span>
+                <div style="width: 10%;"></div>
+            </div>
+            <div class="warlock progress">
+                <span>Warlock</span>
+                <span>1</span>
+                <div style="width: 10%;"></div>
+            </div>
+
+            <h4>Race</h4>
+            <p class="tags">
+                <span>Mountain Dwarf</span>
+            </p>
+        </aside>
+
+        <main>
+            <div class="ability_scores">
+                <div>
+                    <span>Strength</span>
+                    <span>+2</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Strength</span>
+                    <span>+2</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Strength</span>
+                    <span>+2</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Strength</span>
+                    <span>+2</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Strength</span>
+                    <span>+2</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Strength</span>
+                    <span>+2</span>
+                    <span>15</span>
+                </div>
+            </div>
+        </main>
+
+        <script src="./js/jquery.js"></script>
+        <script src="./js/experience.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+           if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./service-worker.js');
+            }
+        </script>
+    </body>
+</html>

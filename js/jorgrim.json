@@ -1,0 +1,33 @@
+{
+    "player_name": "Cappy",
+    "character": {
+      "name": "Jorgrim",
+      "race": "Mountain Dwarf",
+      "experience": 1020,
+      "alignment": "Chaotic Neutral",
+      "background": "Soldier",
+      "classes": [
+        {
+          "name": "Fighter",
+          "specialty": "Rune Knight",
+          "level": 13
+        },
+        {
+          "name": "Warlock",
+          "specialty": "Hexblade",
+          "level": 1
+        }
+      ]
+    },
+    "ability_scores": {
+      "strength":     { "base": 15, "gnome": 2 },
+      "dexterity":    { "base": 13 },
+      "constitution": { "base": 15, "rock gnome": 1 },
+      "intelligence": { "base": 10 },
+      "wisdom":       { "base":  8 },
+      "charisma":     { "base":  8 }
+    },
+    "saving_throws": [ "strength", "constitution" ],
+    "skills": [ "acrobatics", "athletics", "intimidation", "investigation", "survival" ]
+  }
+  

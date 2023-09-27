@@ -26,8 +26,9 @@ html, body, .container, aside {
 
 .container {
     background-color: rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 2fr 3fr;
     outline: 1px solid rgba(0, 0, 0, 0.75);
-    margin-inline: auto;
     width: 100%;
 }
 
@@ -36,7 +37,6 @@ aside {
     border-right: 1px solid rgba(0, 0, 0, 0.75);
     color: white;
     padding: 0.5rem;
-    width: 35%;
 
     h3 {
         color: $colorC;

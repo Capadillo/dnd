@@ -11,6 +11,9 @@ h3 {
 p {
   margin: 0 0 0.25rem 0;
 }
+p:last-child {
+  margin-bottom: 0;
+}
 p.large {
   font-size: 1.5rem;
   font-weight: 600;
@@ -165,14 +168,13 @@ html {
   font-weight: 300;
 }
 
-html, body {
-  height: 100%;
+html, body, .container, aside {
+  min-height: 100vh;
 }
 
 .container {
   background-color: rgba(0, 0, 0, 0.25);
   outline: 1px solid rgba(0, 0, 0, 0.75);
-  height: 100%;
   margin-inline: auto;
   width: 100%;
 }
@@ -181,7 +183,6 @@ aside {
   background-color: #292c33;
   border-right: 1px solid rgba(0, 0, 0, 0.75);
   color: white;
-  height: 100%;
   padding: 0.5rem;
   width: 35%;
 }

@@ -187,6 +187,11 @@ aside {
   color: white;
   padding: 0.5rem;
 }
+aside img {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
 aside h3 {
   color: #8c8f95;
   border-bottom-color: #8c8f95;

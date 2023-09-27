@@ -38,6 +38,12 @@ aside {
     color: white;
     padding: 0.5rem;
 
+    img {
+        display: block;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
     h3 {
         color: $colorC;
         border-bottom-color: $colorC;

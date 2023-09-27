@@ -190,6 +190,10 @@ aside h3 {
   color: #8c8f95;
   border-bottom-color: #8c8f95;
 }
+aside p {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
 aside p.tag strong {
   color: #8c8f95 !important;
 }

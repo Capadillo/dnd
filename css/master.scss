@@ -43,9 +43,14 @@ aside {
         border-bottom-color: $colorC;
     }
 
-    p.tag {
-        strong {
-            color: $colorC !important;
+    p {
+        font-size: 0.75rem;
+        font-weight: 500;
+
+        &.tag {
+            strong {
+                color: $colorC !important;
+            }
         }
     }
 }

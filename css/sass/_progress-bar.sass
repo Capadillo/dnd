@@ -1,0 +1,50 @@
+.progress-bar
+    background-color: rgba(0, 0, 0, 0.8)
+    border: 0.0625rem solid rgba(0, 0, 0, 0.4)
+    border-radius: 0.325rem
+    display: block
+    height: 2rem
+    margin-bottom: 0.25rem
+    overflow: hidden
+    position: relative
+    width: 100%
+    z-index: 0
+
+    .texture
+        background-color: #2271b1
+        background: linear-gradient(0deg, darken(#2271b1, 7.5) 0%, lighten(#2271b1, 7.5) 100%)
+        background-color: rgba(255, 255, 255, 0.5)
+        display: block
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 1
+
+    label
+        color: lighten(#2271b1, 30)
+        font-family: sans-serif
+        font-size: 0.75rem
+        font-weight: 600
+        padding: 0 0.5rem
+        position: absolute
+        text-shadow: 0.0625rem 0.0625rem black
+        top: calc(50% - 0.5rem + 1px)
+        z-index: 2
+
+        &:nth-child(1)
+            left: 0
+
+        &:nth-child(2)
+            right: 0
+
+    @each $class, $color in $class-colors
+        &.#{$class}
+            .texture
+                background-color: #{$color}
+                background: linear-gradient(0deg, darken($color, 7.5) 0%, lighten($color, 7.5) 100%)
+                
+            label
+                color: lighten($color, 30)
+    

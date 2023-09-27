@@ -1,241 +1,194 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap");
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  height: 100%;
-}
-
-body {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 100%;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 h3 {
-  font-family: "Castoro Titling", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 0.5rem 0 0.75rem 0;
-  text-align: center;
-}
-
-h4 {
-  border-bottom: 0.0625rem solid rgba(35, 35, 87, 0.9);
-  color: rgba(35, 35, 87, 0.9);
-  font-family: "Roboto Condensed", sans-serif;
+  border-bottom: 0.0625rem solid #01263a;
+  color: #01263a;
   font-size: 0.75rem;
-  font-style: italic;
   font-weight: 700;
-  letter-spacing: 0.05rem;
-  margin: 0 0 0.325rem 0;
+  margin: 0 0 0.25rem 0;
   padding-bottom: 0.125rem;
 }
 
 p {
-  margin: 0.25rem 0 0.5rem 0;
-}
-p:first-child {
-  margin-top: 0;
-}
-p:last-child {
-  margin-bottom: 0;
-}
-p.small {
-  font-size: 0.75rem;
+  margin: 0 0 0.25rem 0;
 }
 p.large {
   font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
-p.larger {
-  font-size: 2rem;
+p.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
-p.condensed {
-  font-family: "Roboto Condensed", sans-serif;
-}
-p.strong {
-  font-weight: 700;
-}
-p.margin-bottom-reduced {
-  margin-bottom: 0.25rem;
-}
-p.tags span {
+p.tags span, p.tag {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.25rem;
+  color: white;
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 500;
-  padding: 0.2rem 0.3rem;
+  padding: 0.175rem 0.3rem;
+}
+p.tags span strong, p.tag strong {
+  font-weight: 700;
 }
 
-aside {
-  background-color: rgba(46, 46, 114, 0.9);
-  color: white;
-  font-size: 0.875rem;
-  padding: 0.5rem;
-}
-
-.progress {
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 0.0625rem solid rgba(24, 24, 59, 0.9);
-  border-radius: 0.25rem;
-  display: flex;
+.progress-bar {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0.0625rem solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.325rem;
+  display: block;
   height: 2rem;
-  justify-content: space-between;
-  margin: 0 0 0.5rem 0;
-  position: relative;
+  margin-bottom: 0.25rem;
   overflow: hidden;
+  position: relative;
   width: 100%;
   z-index: 0;
 }
-.progress ~ .progress {
-  margin-bottom: 0.25rem;
-}
-.progress span {
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0 0.45rem;
-  position: relative;
-  text-shadow: 1px 1px 1px black;
-  z-index: 2;
-}
-.progress div {
-  background-color: rgba(57, 57, 141, 0.9);
-  background: linear-gradient(0deg, rgba(35, 35, 87, 0.9) 0%, rgba(57, 57, 141, 0.9) 100%);
-  border-right: 0.0625rem solid rgba(255, 255, 255, 0.1);
+.progress-bar .texture {
+  background-color: #2271b1;
+  background: linear-gradient(0deg, #1c5d91 0%, #2885d1 100%);
+  background-color: rgba(255, 255, 255, 0.5);
+  display: block;
   height: 100%;
+  left: 0;
   position: absolute;
+  top: 0;
+  width: 100%;
   z-index: 1;
 }
-.progress.barbarian {
-  color: #ef9982;
+.progress-bar label {
+  color: #85bbe7;
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  position: absolute;
+  text-shadow: 0.0625rem 0.0625rem black;
+  top: calc(50% - 0.5rem + 1px);
+  z-index: 2;
 }
-.progress.barbarian div {
-  background-color: #eb7e60;
+.progress-bar label:nth-child(1) {
+  left: 0;
+}
+.progress-bar label:nth-child(2) {
+  right: 0;
+}
+.progress-bar.barbarian .texture {
+  background-color: #e7623e;
   background: linear-gradient(0deg, #e3461c 0%, #eb7e60 100%);
 }
-.progress.bard {
-  color: #c79ec8;
+.progress-bar.barbarian label {
+  color: #f8d1c6;
 }
-.progress.bard div {
-  background-color: #b985ba;
+.progress-bar.bard .texture {
+  background-color: #ab6dac;
   background: linear-gradient(0deg, #9a589b 0%, #b985ba 100%);
 }
-.progress.cleric {
-  color: #bec7d2;
+.progress-bar.bard label {
+  color: #e3cfe3;
 }
-.progress.cleric div {
-  background-color: #a8b4c2;
+.progress-bar.cleric .texture {
+  background-color: #91a1b2;
   background: linear-gradient(0deg, #7b8ea2 0%, #a8b4c2 100%);
 }
-.progress.druid {
-  color: #a7b558;
+.progress-bar.cleric label {
+  color: #ebeef1;
 }
-.progress.druid div {
-  background-color: #929f47;
+.progress-bar.druid .texture {
+  background-color: #7a853b;
   background: linear-gradient(0deg, #626b2f 0%, #929f47 100%);
 }
-.progress.fighter {
-  color: #af735b;
+.progress-bar.druid label {
+  color: #c3cc8d;
 }
-.progress.fighter div {
-  background-color: #99614b;
+.progress-bar.fighter .texture {
+  background-color: #7f513e;
   background: linear-gradient(0deg, #654131 0%, #99614b 100%);
 }
-.progress.monk {
-  color: #8ac3d8;
+.progress-bar.fighter label {
+  color: #c89f8e;
 }
-.progress.monk div {
-  background-color: #6eb4cf;
+.progress-bar.monk .texture {
+  background-color: #51a5c5;
   background: linear-gradient(0deg, #3c93b4 0%, #6eb4cf 100%);
 }
-.progress.paladin {
-  color: #ccbc89;
+.progress-bar.monk label {
+  color: #c4e0eb;
 }
-.progress.paladin div {
-  background-color: #c1ad6f;
+.progress-bar.paladin .texture {
+  background-color: #b59e54;
   background: linear-gradient(0deg, #9e8944 0%, #c1ad6f 100%);
 }
-.progress.ranger {
-  color: #74a788;
+.progress-bar.paladin label {
+  color: #e3dbbf;
 }
-.progress.ranger div {
-  background-color: #5f9674;
+.progress-bar.ranger .texture {
+  background-color: #507f62;
   background: linear-gradient(0deg, #416850 0%, #5f9674 100%);
 }
-.progress.rogue {
-  color: #7b7e77;
+.progress-bar.ranger label {
+  color: #a3c5b0;
 }
-.progress.rogue div {
-  background-color: #686b65;
+.progress-bar.rogue .texture {
+  background-color: #555752;
   background: linear-gradient(0deg, #42433f 0%, #686b65 100%);
 }
-.progress.sorcerer {
-  color: #c94b4b;
+.progress-bar.rogue label {
+  color: #a2a49e;
 }
-.progress.sorcerer div {
-  background-color: #b63737;
+.progress-bar.sorcerer .texture {
+  background-color: #992e2e;
   background: linear-gradient(0deg, #7c2525 0%, #b63737 100%);
 }
-.progress.warlock {
-  color: #a06fbe;
+.progress-bar.sorcerer label {
+  color: #da8686;
 }
-.progress.warlock div {
-  background-color: #8f55b2;
+.progress-bar.warlock .texture {
+  background-color: #7b469b;
   background: linear-gradient(0deg, #663a81 0%, #8f55b2 100%);
 }
-.progress.wizard {
-  color: #4873cf;
+.progress-bar.warlock label {
+  color: #c3a4d6;
 }
-.progress.wizard div {
-  background-color: #325fbf;
+.progress-bar.wizard .texture {
+  background-color: #2a50a1;
   background: linear-gradient(0deg, #224183 0%, #325fbf 100%);
 }
-
-main {
-  padding: 0.5rem;
+.progress-bar.wizard label {
+  color: #85a2df;
 }
 
-.ability_scores {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1rem;
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
 }
-.ability_scores div {
-  display: flex;
-  flex-direction: column;
+
+html, body {
+  height: 100%;
 }
-.ability_scores div span:nth-child(1) {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0 0.5rem 0.325rem 0.5rem;
-  text-align: center;
-}
-.ability_scores div span:nth-child(2) {
-  background-color: rgba(0, 0, 0, 0.75);
-  border-radius: 0.5rem;
-  color: white;
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 700;
-  padding: 1rem 1.5rem;
-  text-align: center;
-}
-.ability_scores div span:nth-child(3) {
-  background-color: rgba(0, 0, 0, 0.75);
-  border-radius: 0 0 0.5rem 0.5rem;
-  color: white;
-  font-size: 0.875rem;
-  font-weight: 400;
+
+.container {
+  background-color: rgba(0, 0, 0, 0.25);
+  outline: 1px solid rgba(0, 0, 0, 0.75);
+  height: 100%;
   margin-inline: auto;
-  padding: 0.625rem 0.75rem;
+  width: 100%;
+}
+
+aside {
+  background-color: #292c33;
+  border-right: 1px solid rgba(0, 0, 0, 0.75);
+  color: #8c8f95;
+  height: 100%;
+  padding: 0.5rem;
+  width: 35%;
+}
+aside h3 {
+  color: #8c8f95;
+  border-bottom-color: #8c8f95;
+}
+aside p.tag strong {
+  color: #8c8f95 !important;
 }

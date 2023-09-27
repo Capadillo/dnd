@@ -180,7 +180,7 @@ html, body {
 aside {
   background-color: #292c33;
   border-right: 1px solid rgba(0, 0, 0, 0.75);
-  color: #8c8f95;
+  color: white;
   height: 100%;
   padding: 0.5rem;
   width: 35%;
